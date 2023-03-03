@@ -1,6 +1,7 @@
 package pl.majerowski.coffe_e.brewMethod;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -54,6 +55,7 @@ public class MethodController {
     }
 
     // -> Save new method to database
+    @Transactional
     @PostMapping("/save")
     public String saveMethod(@Valid BrewMethod brewMethod, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {

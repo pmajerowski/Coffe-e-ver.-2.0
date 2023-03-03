@@ -104,8 +104,8 @@ values (1, 1),
        (5, 1),
        (5, 3);
 
-INSERT INTO brew_methods (id, brew_time, name, ratio, recipe, water_temperature, brew_type_id, grind_size_id)
-VALUES (1, '3:30', '4 : 6', 15,
+INSERT INTO brew_methods (brew_time, name, ratio, recipe, water_temperature, brew_type_id, grind_size_id)
+VALUES ('3:30', '4 : 6', 15,
         '1. Rinse filter & pre-heat V60' ||E'\n'||
         '2. Pour in ${coffeeGrounds} g of coarse-ground coffee' ||E'\n'||
         '3. Add ${desiredAmount / 5} of water per pour 5 times, waiting 45s between each pour. This results in a total brew of ${desiredAmount}.' ||E'\n'||
@@ -113,7 +113,7 @@ VALUES (1, '3:30', '4 : 6', 15,
         '5. Use either less or more water for the second pour to compensate for the difference (if any) in the first one.',
         87, 1, 6),
 
-       (2, '3:30', 'Hoffman’s', 16,
+       ('3:30', 'Hoffman’s', 16,
         '1. Rinse filter & pre-heat V60' ||E'\n'||
          '2. Pour in grounds, create well in the middle.' ||E'\n'||
          '3. Pre-wet with ${desiredAmount / 16.6669 * 2} g of water (~2x weight of grounds).' ||E'\n'||
@@ -124,7 +124,7 @@ VALUES (1, '3:30', '4 : 6', 15,
          '8. Gently swirl brewer to flatten coffee bed for even extraction' ||E'\n'||
          '9. Aim to finish drawdown by 3min 30s.', 99, 1, 1),
 
-       (3, '3:00', 'Scott Rao’s', 16,
+       ('3:00', 'Scott Rao’s', 16,
         '1. Rinse filter & pre-heat V60' ||E'\n'||
            '2. Pour in grounds, flatten, pre-wet with ${desiredAmount / 16.6669 * 3} g of water (~3x weight of grounds).' ||E'\n'||
            '3. Gently excavate to wet all the grounds within 10s' ||E'\n'||
@@ -133,14 +133,14 @@ VALUES (1, '3:30', '4 : 6', 15,
            '6. At 1min 45s, swirl V60 to flatten coffee bed for even brew' ||E'\n'||
            '7. Drawdown should be complete within 3 minutes.', 93, 1, 4),
 
-       (4, '4:00', 'Intelligentsia', 18,
+       ('4:00', 'Intelligentsia', 18,
             '1. Rinse filter & pre-heat V60' ||E'\n'||
           '2. Pour in ${coffeeGrounds} g of coffee (ground to “sand-like” levels)' ||E'\n'||
           '3. Add ${desiredAmount / 16.6669 * 2} g (2x weight of grounds) of water for pre-wetting. Pour in a clockwise spiral outward from the centre. Wait ~1 min.' ||E'\n'||
           '4. Add ${desiredAmount / 6.7}-${desiredAmount / 4.68}g of water a time, waiting 10-12s between pours. Pours should be slow enough that the water falls directly downward, and concentrated in the centre of the coffee bed, moving outward.' ||E'\n'||
           '5. Stop once the target weight is reached, removing the dripper once it reaches an occasional drip.',93, 1, 2),
 
-       (5, '3:00', 'Hario’s', 12,
+       ('3:00', 'Hario’s', 12,
         '1. Fold filter paper and place on dripper, before rinsing and warming with boiling water.' ||E'\n'||
         '2. Pour in ${coffeeGrounds} g of coffee, shaking the V60 lightly to level the grounds.' ||E'\n'||
         '3. Pour boiling water from the centre of the grounds, spiralling outwards. Let it pre-wet for 30s.' ||E'\n'||
@@ -148,7 +148,7 @@ VALUES (1, '3:30', '4 : 6', 15,
         '5. Remove the dripper once your brew is finished.',
         100, 1, 3),
 
-       (6, '1:10', 'Wendelien Van Bunnik', 7,
+       ('1:10', 'Wendelien Van Bunnik', 7,
         '1. Pour ${desiredAmount /2} g of water on the ${coffeeGrounds} g of coffee in 10 seconds.' ||E'\n'||
         '2. Stir firmly for 20 times in 10 seconds.' ||E'\n'||
         '3. Put the filter cap with a rinsed filter on the AeroPress and gently press out excess air.' ||E'\n'||
@@ -157,7 +157,7 @@ VALUES (1, '3:30', '4 : 6', 15,
         '6. Cool the brew down to roughly 60°C by stirring and decanting.',
         92, 2, 5),
 
-       (7, '3:00', 'Hoffman’s', 16,
+       ('3:00', 'Hoffman’s', 16,
         'Set brewer in standard position on a server. Dont rinse or preheat the brewer (it doesnt make any difference).' ||E'\n'||
         'Start a timer, add ${desiredAmount}mL water, aiming to wet all the coffee during pouring.' ||E'\n'||
         'Then immediately place the plunger on top of the brewer, about 1cm in. This creates a vacuum to stop the coffee from dripping through.' ||E'\n'||
@@ -168,7 +168,7 @@ VALUES (1, '3:30', '4 : 6', 15,
         'Drink and enjoy!',
         90, 2, 1),
 
-       (8, '1:30', 'Tim Wendelboe’s', 14,
+       ('1:30', 'Tim Wendelboe’s', 14,
         'Rinse the paper filter with running tap water for 10 seconds.' ||E'\n'||
         'Use ${coffeeGrounds} grams of freshly fine filter ground coffee.' ||E'\n'||
         'Pour ${desiredAmount}g of water at about 96°C over the coffee.' ||E'\n'||
@@ -179,7 +179,7 @@ VALUES (1, '3:30', '4 : 6', 15,
         'Then place the handle on top of the AeroPress and press the coffee into a large cup or pitcher by using your body weight.',
         96, 2, 2),
 
-       (9, '2:30', 'Aeropress for two', 15,
+       ('2:30', 'Aeropress for two', 15,
         'Add ${desiredAmount /2} of water rapidly' ||E'\n'||
         'Put down the plunger, and press 1 inch. Let the resistance/back pressure help you push the plunger back up, while pulling the plunger to the side.' ||E'\n'||
         'Reinsert the plunger and follow the same step again.' ||E'\n'||
@@ -189,7 +189,7 @@ VALUES (1, '3:30', '4 : 6', 15,
         'Enjoy two cups of AeroPress!',
         93, 2, 4),
 
-       (10, '1:30', 'Light roast', 15,
+       ('1:30', 'Light roast', 15,
         'Rinse filter with hot water' ||E'\n'||
         'Add coffee, and add all the water quickly' ||E'\n'||
         'No stirring & no bloom' ||E'\n'||
@@ -198,7 +198,7 @@ VALUES (1, '3:30', '4 : 6', 15,
         'Stop pressing before the hiss',
         99, 2, 2),
 
-       (11, '2:30', 'Smile Tiger Coffee Roasters', 16,
+       ('2:30', 'Smile Tiger Coffee Roasters', 16,
         'Heat the water to 95ºC' ||E'\n'||
         'Pour ${coffeeGrounds * 2} g water over the grounds and stir gently' ||E'\n'||
         'After 30 seconds pour to ${desiredAmount / 2}g of water' ||E'\n'||
@@ -206,7 +206,7 @@ VALUES (1, '3:30', '4 : 6', 15,
         'At 2:00 pour the rest of water up to ${desiredAmount} g.',
         95, 3, 3),
 
-       (12, '1:45', 'Brewing is for everyone', 16,
+       ('1:45', 'Brewing is for everyone', 16,
         'Boil the water' ||E'\n'||
         'Rinse the filter thoroughly' ||E'\n'||
         'Grind ${coffeeGrounds} g of coffee on medium' ||E'\n'||
@@ -216,7 +216,7 @@ VALUES (1, '3:30', '4 : 6', 15,
         'Pour slowly up to ${desiredAmount} g total',
         99, 3, 4),
 
-       (13, '2:00', 'Filtru', 14,
+       ('2:00', 'Filtru', 14,
         'Heat the water to 94ºC' ||E'\n'||
         'Grind the coffee to a medium consistency' ||E'\n'||
         'Bloom with ${coffeeGrounds * 2} g water' ||E'\n'||
@@ -227,7 +227,7 @@ VALUES (1, '3:30', '4 : 6', 15,
         'Enjoy!',
         94, 3, 4),
 
-       (14, '1:15', 'The Moka Pot Method', 5,
+       ('1:15', 'The Moka Pot Method', 5,
         'Fill the bottom half of your coffee maker with water.' ||E'\n'||
         'Insert the filter basket into the bottom of the pot.' ||E'\n'||
         'Fill the basket with coffee and give it a shake to settle the grounds evenly. Do not tamp the grounds, you want them loose.' ||E'\n'||
