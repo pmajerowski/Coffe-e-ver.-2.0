@@ -14,13 +14,15 @@ After you're done with Your coffee, the application updates the amount of used c
 <br>
 The visual layout written from scratch is kept in the idea of simplicity, giving the user a clear and easy-to-use interface. The most complicated views consist of tables, but despite complex data content, they are kept in an aesthetic and understandable fashion.
 <br>
+VERSION 2.0 -> migrated to Spring boot
+<br>
 <br>
 
 <h2>Technologies used</h2>
  </hr>
 <ul>
   <li>Java</li>
-  <li>Spring</li>
+  <li>Spring boot (since ver. 2.0)</li>
   <li>Hibernate / JPA</li>
   <li>JSP</li>
   <li>MySQL</li>
