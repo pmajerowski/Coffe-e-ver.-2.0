@@ -28,7 +28,7 @@ VERSION 2.0 -> migrated to Spring boot
   <li>MySQL</li>
   <li>CSS</li>
   <li>A bit of JavaScript</li>
-  <li>Deployed locally on a Tomcat server</li>
+  <li>Database deployed in a Docker container</li>
 </ul>
 <br>
 
@@ -39,7 +39,7 @@ To run Coffe-e locally you can use IntelliJ.
   <li>Clone this repository and open the project.</li>
  <li>Built project with Maven</li>
   
-  <li>To set up the database - add a Docker run configuration and in 'Run' set the 'Compose files' to './docker/docker-compose.yml; ':<br>
+  <li>To set up the database - add a Docker run configuration (docker-compose) and in 'Run' set the 'Compose files' to './docker-compose.yml; ':<br>
   <img width="400" alt="image" src="https://user-images.githubusercontent.com/105345146/222211296-8baff503-564f-42a1-a4f0-bbd5daf735dc.png">
   
   <li>Next, run the Docker desktop application and then, in IntelliJ - run the docker-compose:</li>
