@@ -52,8 +52,8 @@ To run Coffe-e locally you can use IntelliJ.
   
   <li>Now, as it's deployed you may enter the application at <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></li>
   
-  <li>To use the main part of the application it is necessary to log in. You can register and create new account or use this working login and password:<br>
-  <strong>email: user@coffee.com</strong><br><strong>password: coffee123</strong></li>
+  <li>To use the main part of the application it is necessary to log in. You can register and create new account or use this working login and password:<br><br>
+  <strong>email: user@coffee.com</strong><br><strong>password: coffee123</strong></li><br>
   <img width="360" alt="image" src="https://user-images.githubusercontent.com/105345146/222218832-8636eead-0d00-4313-ae59-40e41994f333.png">
   <br><br> Enjoy!
 
