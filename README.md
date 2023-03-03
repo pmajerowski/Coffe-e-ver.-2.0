@@ -32,8 +32,10 @@ The visual layout written from scratch is kept in the idea of simplicity, giving
 
 <h2>Building and running</h2>
 </hr>
-<ul>To run Coffe-e locally you can use IntelliJ.
+To run Coffe-e locally you can use IntelliJ.
+<ul>
   <li>Clone this repository and open the project.</li>
+ <li>Built project with maven</li>
   
   <li>To set up the database - add a Docker run configuration and in 'Run' set the 'Compose files' to './docker/docker-compose.yml; ':<br>
   <img width="400" alt="image" src="https://user-images.githubusercontent.com/105345146/222211296-8baff503-564f-42a1-a4f0-bbd5daf735dc.png">
