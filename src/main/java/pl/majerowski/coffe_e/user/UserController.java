@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import pl.majerowski.coffe_e.coffee.Coffee;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -73,7 +74,10 @@ public class UserController {
     }
 
     @PostMapping("/user")
-    public String editUser(User user) {
+    public String editUser(@Valid User user, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "app/user/user";
+        }
         jpaUserService.editUser(user);
         return "redirect:/login";
     }
