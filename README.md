@@ -33,45 +33,78 @@ VERSION 2.0 -> migrated to Spring boot
 <br>
 
 <h2>Building and running</h2>
-</hr>
-To run Coffe-e locally you can use IntelliJ.
-<ul>
-  <li>Clone this repository and open the project.</li>
- <li>Built project with Maven</li>
+<hr>
+
+<h3>Prerequisites</h3>
+
+Before you can build and run this application, you need to have the following software installed on your machine:
+<br>
+ <ul>
+  <li><a href="https://www.oracle.com/pl/java/technologies/downloads/">Java</a> JDK version 11 or later</li>
+  <li><a href="https://maven.apache.org/download.cgi">Maven</a> version 3.6 or later</li>
+  <li><a href="https://www.docker.com/products/docker-desktop/">Docker</a> version 20.10 or later</li>
+  <li><a href="https://docs.docker.com/compose/install/">Docker Compose</a> version 2.12 or later</li>
+ </ul>
+ 
+<h3>Building the Application</h3>
+To build the application, run the following command from the root directory of the project:
+<li>
+$ <code>mvn clean package</code>
+  </li>
+ 
+
+This will compile the Java code and produce a JAR file containing the application.
+<br>
+
+<h3>Runnung the Database</h3>
+<ol>
+  <li>Stay in the same root directory of the project.</li>
+  <li>Run the following command to start the database - remember that Docker desktop must be up and running:</li>
+  $ <code>docker-compose up -d</code> <br>
+This will download and start the necessary Docker images for the database, and create a Docker network for them to communicate on.
+</ol>
+
+<h3>Running the Application</h3>
+
+  <li>In terminal, from the same location, run the application with command:</li>
+  $ <code>java -jar target/charity-0.0.1-SNAPSHOT.jar</code> <br>
   
-  <li>To set up the database - add a Docker run configuration (docker-compose) and in 'Run' set the 'Compose files' to './docker-compose.yml; ':<br>
-  <img width="400" alt="image" src="https://user-images.githubusercontent.com/105345146/222211296-8baff503-564f-42a1-a4f0-bbd5daf735dc.png">
+  This will start the Tomcat server embedded within Spring Boot.
   
-  <li>Next, run the Docker desktop application and then, in IntelliJ - run the docker-compose:</li>
-  <img width="400" alt="image" src="https://user-images.githubusercontent.com/105345146/222211773-38c3fedb-71ab-4d0c-9093-ac17627f9321.png">
-  
-  <li>In project tree go to src/main/java/pl/majerowski/coffe_e/Coffe_e_Application.java</li>
-  
-  <li>Run the application by clicking the green 'run' button</li>
-  <img width="400" alt="image" src="https://user-images.githubusercontent.com/105345146/222765143-164008b2-b810-44c3-9aa8-76da00c885d1.png">
-  
-  <li>Now, as it's deployed you may enter the application at <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></li>
-  
-  <li>To use the main part of the application it is necessary to log in. You can register and create new account or use this working login and password:<br><br>
-  <strong>email: user@coffee.com</strong><br><strong>password: coffee123</strong></li><br>
-  <img width="360" alt="image" src="https://user-images.githubusercontent.com/105345146/222218832-8636eead-0d00-4313-ae59-40e41994f333.png">
+  <li>Open a web browser and navigate to  <strong>http://localhost:8080</strong> . You should see the home page of the application.</li>
+ 
+ </ol>
+    
+ <h3> Stopping the Application</h3>
+ To stop the application and the database, press <kbd>control+C</kbd> in the terminal.
+ 
+ <h2>Usage</h2>
+ <hr>
+ 
+ <p>Apart from the landing page, the main application is available for logged users only. In order to proceed you can either register, creating a new account, or log in using below credentials:<br>
+ <ul>
+  <li><strong>email:</strong> user@coffee.com</li>
+  <li><strong>password:</strong> coffee123</li><br>
+  <img width="250" alt="image" src="https://user-images.githubusercontent.com/105345146/222218832-8636eead-0d00-4313-ae59-40e41994f333.png">
   <br><br> Enjoy!
+  
+  </p>
 
-  </ul> 
+<h2>Acknowledgments</h2>
 
-<br> 
+The purpose of the Coffe-e project is strictly educational. It was established and coded as a final project of Coders Lab - School of IT bootcamp. Althought the supervision of the mentors, all code and ideas were independent.
 
 <h2>Visual scope</h2>
-<strong>Dashboard screen: </strong>
+<strong>Dashboard screen: </strong><br>
 <img width="390" alt="image" src="https://user-images.githubusercontent.com/105345146/221577660-c3758908-ad7a-4d69-a6d4-443a9279a091.png">
 <br>
-<strong>Coffes list: </strong>
+<strong>Coffes list: </strong><br>
 <img width="390" alt="image" src="https://user-images.githubusercontent.com/105345146/221578136-8b01f2db-c18e-4972-ac5e-31fb07db2e79.png">
 <br>
-<strong>Brewing details select screen: </strong>
+<strong>Brewing details select screen: </strong><br>
 <img width="390" alt="image" src="https://user-images.githubusercontent.com/105345146/221578493-0d3bb1f7-8bc6-4e55-a7e3-99fa9c4f5943.png">
 <br>
-<strong>Brewing recipe screen: </strong>
+<strong>Brewing recipe screen: </strong><br>
 <img width="390" alt="image" src="https://user-images.githubusercontent.com/105345146/221578712-78a05525-6072-4846-bcbe-776f0f77029e.png">
 
 <br>
