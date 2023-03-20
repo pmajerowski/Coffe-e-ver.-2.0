@@ -26,9 +26,15 @@ public class RecipeParser {
         int matchEnd;
         for (matchEnd = -1; m.find(); matchEnd = m.end()) {
             switch (m.group(1)) {
-                case "*": product *= Double.parseDouble(m.group(2)); break;
-                case "/": product /= Double.parseDouble(m.group(2)); break;
-                case "":  product  = Double.parseDouble(m.group(2)); break;
+                case "*":
+                    product *= Double.parseDouble(m.group(2));
+                    break;
+                case "/":
+                    product /= Double.parseDouble(m.group(2));
+                    break;
+                case "":
+                    product = Double.parseDouble(m.group(2));
+                    break;
             }
         }
         if (matchEnd != term.length()) {

@@ -18,7 +18,9 @@ public class MethodController {
     private final JpaBrewingTypeService jpaBrewingTypeService;
     private final GrindSizeRepository grindSizeRepository;
 
-    public MethodController(JpaBrewMethodService jpaBrewMethodService, JpaBrewingTypeService jpaBrewingTypeService, GrindSizeRepository grindSizeRepository) {
+    public MethodController(JpaBrewMethodService jpaBrewMethodService,
+                            JpaBrewingTypeService jpaBrewingTypeService,
+                            GrindSizeRepository grindSizeRepository) {
         this.jpaBrewMethodService = jpaBrewMethodService;
         this.jpaBrewingTypeService = jpaBrewingTypeService;
         this.grindSizeRepository = grindSizeRepository;
@@ -105,5 +107,7 @@ public class MethodController {
     }
 
     @ModelAttribute("grindSizes")
-    public List<GrindSize> grindSizes() { return grindSizeRepository.findAll(); }
+    public List<GrindSize> grindSizes() {
+        return grindSizeRepository.findAll();
+    }
 }

@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Landing Page</title>
-        <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>"/>
+        <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>
     </head>
     <body>
         <header>

@@ -102,7 +102,7 @@ public class CoffeeController {
                            @RequestParam double quantity,
                            @RequestParam int rating) {
         double updatedQuantity =
-                quantity - Double.parseDouble(usedCoffeeGrounds.substring(0, usedCoffeeGrounds.length()-1));
+                quantity - Double.parseDouble(usedCoffeeGrounds.substring(0, usedCoffeeGrounds.length() - 1));
 
         jpaCoffeeService.updateRatingOfCoffee(rating, id);
         jpaCoffeeService.updateQuantityOfCoffee(updatedQuantity, id);

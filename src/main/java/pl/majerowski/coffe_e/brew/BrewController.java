@@ -42,10 +42,10 @@ public class BrewController {
     public String recipe(BrewDTO brewDTO, Model model) {
         double coffeeQuantity = jpaCoffeeService.getCoffee(brewDTO.getCoffeeId()).getQuantity();
         BrewMethod brewMethod = jpaBrewMethodService.getMethod(brewDTO.getBrewMethodId());
-        double coffeeGrounds = Math.floor(brewDTO.getDesiredAmount()/brewMethod.getRatio());
+        double coffeeGrounds = Math.floor(brewDTO.getDesiredAmount() / brewMethod.getRatio());
 
-        if(coffeeGrounds > coffeeQuantity) {
-            double maxDesiredAmount =Math.floor(brewMethod.getRatio() * coffeeQuantity);
+        if (coffeeGrounds > coffeeQuantity) {
+            double maxDesiredAmount = Math.floor(brewMethod.getRatio() * coffeeQuantity);
             String message = String.format(
                     "You have only %s g of this coffee. This is enough for %s ml of desired amount for this method.",
                     coffeeQuantity, maxDesiredAmount);
@@ -57,7 +57,8 @@ public class BrewController {
             return "app/brew/select";
         }
 
-        double desiredAmount = brewDTO.getDesiredAmount();;
+        double desiredAmount = brewDTO.getDesiredAmount();
+        ;
         Coffee coffee = jpaCoffeeService.getCoffee(brewDTO.getCoffeeId());
 
         brewDTO.setCoffeeGrounds(coffeeGrounds);

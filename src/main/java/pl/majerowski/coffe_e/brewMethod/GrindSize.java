@@ -1,4 +1,5 @@
 package pl.majerowski.coffe_e.brewMethod;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

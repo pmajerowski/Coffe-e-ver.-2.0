@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 @Primary
-public class JpaBrewMethodService implements BrewMethodService{
+public class JpaBrewMethodService implements BrewMethodService {
     private final BrewMethodRepository brewMethodRepository;
 
     public JpaBrewMethodService(BrewMethodRepository brewMethodRepository) {
@@ -34,15 +34,27 @@ public class JpaBrewMethodService implements BrewMethodService{
         brewMethodRepository.deleteById(methodId);
     }
 
-    public List<BrewMethod> getAllMethodsSortByName() { return brewMethodRepository.findBrewMethodsByOrderByName();}
+    public List<BrewMethod> getAllMethodsSortByName() {
+        return brewMethodRepository.findBrewMethodsByOrderByName();
+    }
 
-    public List<BrewMethod> getAllMethodsSortByBrewType() { return brewMethodRepository.findBrewMethodsByOrderByBrewType();}
+    public List<BrewMethod> getAllMethodsSortByBrewType() {
+        return brewMethodRepository.findBrewMethodsByOrderByBrewType();
+    }
 
-    public List<BrewMethod> getAllMethodsSortByBrewTime() { return brewMethodRepository.findBrewMethodsByOrderByBrewTime();}
+    public List<BrewMethod> getAllMethodsSortByBrewTime() {
+        return brewMethodRepository.findBrewMethodsByOrderByBrewTime();
+    }
 
-    public List<BrewMethod> getAllMethodsSortByRatio() { return brewMethodRepository.findBrewMethodsByOrderByRatio();}
+    public List<BrewMethod> getAllMethodsSortByRatio() {
+        return brewMethodRepository.findBrewMethodsByOrderByRatio();
+    }
 
-    public List<BrewMethod> getAllMethodsSortByGrindSize() { return brewMethodRepository.findBrewMethodsByOrderByGrindSize();}
+    public List<BrewMethod> getAllMethodsSortByGrindSize() {
+        return brewMethodRepository.findBrewMethodsByOrderByGrindSize();
+    }
 
-    public List<BrewMethod> getAllMethodsSortByWaterTemperature() { return brewMethodRepository.findBrewMethodsByOrderByWaterTemperature();}
+    public List<BrewMethod> getAllMethodsSortByWaterTemperature() {
+        return brewMethodRepository.findBrewMethodsByOrderByWaterTemperature();
+    }
 }
