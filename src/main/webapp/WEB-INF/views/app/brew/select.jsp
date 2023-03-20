@@ -67,9 +67,9 @@
                 <span class="list_2"><form:select cssClass="list_2" itemValue="id" itemLabel="name" path="brewMethodId" multiple="false"/></span>
             </p>
             <p style="text-align: center">
-                <span>Desired Amount (in grams)</span><br>
-                <span> <form:input type="number" cssClass="list_2" path="desiredAmount"/></span>
-                <form:errors path="desiredAmount" cssClass="error"/><br><br>
+                <span>Desired Amount (ml)</span><br>
+                <span> <form:input type="number" min="0" cssClass="list_2" path="desiredAmount"/></span>
+                <form:errors path="desiredAmount" cssClass="error" /><br><br>
                 <c:if test="${not empty brewDTO.message}">
                     <span class="error">
                             ${brewDTO.message}

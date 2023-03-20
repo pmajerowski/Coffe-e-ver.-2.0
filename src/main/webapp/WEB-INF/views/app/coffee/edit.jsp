@@ -44,13 +44,13 @@
                 <p>
                     <span><form:label path="name">Coffee name</form:label></span>
                     <br>
-                    <span><form:input path="name"/></span>
+                    <span><form:input path="name" maxlength="50"/></span>
                     <form:errors path="name" cssClass="error"/>
                 </p>
                 <p>
                     <span><form:label path="origin">Origin</form:label></span>
                     <br>
-                    <span><form:input path="origin"/></span>
+                    <span><form:input path="origin" maxlength="50"/></span>
                     <form:errors path="origin" cssClass="error"/>
                 </p>
                 <p>
@@ -76,13 +76,13 @@
                 <p>
                     <span><form:label path="flavourNotes">Flavour notes</form:label></span>
                     <br>
-                    <span> <form:input path="flavourNotes"/></span>
+                    <span> <form:input path="flavourNotes" maxlength="50"/></span>
                     <form:errors path="flavourNotes" cssClass="error"/>
                 </p>
                 <p>
                     <span><form:label path="quantity">Quantity (in grams)</form:label></span>
                     <br>
-                    <span> <form:input path="quantity" type="number"/></span>
+                    <span> <form:input path="quantity" min="0" max="5000" type="number"/></span>
                     <form:errors path="quantity" cssClass="error"/>
                 </p>
                 <p>

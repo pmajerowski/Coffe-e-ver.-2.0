@@ -45,7 +45,7 @@
                     <div>
                         <p>
                             <span><form:label path="name">Method name</form:label></span><br>
-                            <span><form:input path="name"/></span>
+                            <span><form:input path="name" maxlength="50"/></span><br>
                             <form:errors path="name" cssClass="error"/>
                         </p>
                         <p>
@@ -66,17 +66,21 @@
                         </p>
                         <p>
                             <span><form:label path="ratio"> Coffee : water ratio</form:label></span><br>
-                            <span> <strong> 1 : </strong><form:input path="ratio" cssStyle="width: 15%"/></span>
+                            <span>
+                                <strong> 1 : </strong><form:input path="ratio" type="number" min="0" max="100" cssStyle="width: 19%"/>
+                            </span>
                             <form:errors path="ratio" cssClass="error"/>
                         </p>
                         <p>
                             <span><form:label path="waterTemperature">Water temperature</form:label></span><br>
-                            <span> <form:input cssStyle="width: 14%" path="waterTemperature"/><strong>℃</strong></span>
+                            <span> <form:input cssStyle="width: 20%" type="number" min="0" max="100" path="waterTemperature"/><strong>℃</strong></span>
                             <form:errors path="waterTemperature" cssClass="error"/>
                         </p>
                         <p>
                             <span><form:label path="brewTime">Brew time (mm:ss)</form:label></span><br>
-                            <span> <form:input path="brewTime"/></span>
+                            <span>
+                                <form:input path="brewTime" step="1" pattern="[0-5][0-9]:[0-5][0-9]"/>
+                            </span>
                             <form:errors path="brewTime" cssClass="error"/>
                         </p>
                         <p>
