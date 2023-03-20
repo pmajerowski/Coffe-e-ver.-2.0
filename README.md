@@ -67,7 +67,7 @@ This will download and start the necessary Docker images for the database, and c
 <h3>Running the Application</h3>
 
   <li>In terminal, from the same location, run the application with command:</li>
-  $ <code>java -jar target/charity-0.0.1-SNAPSHOT.jar</code> <br>
+  $ <code>java -jar target/Coffe-e-2.0.jar</code> <br>
   
   This will start the Tomcat server embedded within Spring Boot.
   
